@@ -1,7 +1,17 @@
-export const Home = (): JSX.Element => (
-  <div>
-    <h1 className="text-red-500">hello world</h1>
-  </div>
-);
+import React from 'react';
+
+interface Props {}
+
+const Home = (props: Props) => {
+  return (
+    <div>
+      <main>
+        <h1>start</h1>
+      </main>
+
+      <footer></footer>
+    </div>
+  );
+};
 
 export default Home;
