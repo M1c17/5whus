@@ -17,11 +17,8 @@ export default function Dropdown(props: {
               className="w-full border-b border-gray-100 rounded-t cursor-pointer hover:bg-teal-100"
               onClick={() => props.addItem(item)}
             >
-              <div className="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent hover:border-teal-100">
-                <div className="flex items-center w-full">
-                  <div className="mx-2 leading-6 ">{item}</div>
-                </div>
-              </div>
+              {/* TODO: WHEN ADD ITEM FILL THE PROFILE WITH BUTTOM */}
+              <div className="mx-2 leading-6 ">{item}</div>
             </div>
           );
         })}

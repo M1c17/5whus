@@ -1,23 +1,23 @@
 import React from 'react';
 
 export default function FormInput(props: {
-  placeholder: string;
+  label: string;
   name: string;
   id: string;
   autoComplete: string;
 }) {
   return (
     <div className="formInput-wrapper">
+      <label className="relative text-gray-500">{props.label}</label>
       <div className="flex flex-col items-center w-full mx-auto">
         <div className="w-full">
           <div className="relative flex flex-col items-center">
             <div className="w-full ">
-              <div className="flex p-1 my-2 bg-white border border-gray-200 rounded ">
+              <div className="flex p-1 my-2 bg-white border border-gray-200 rounded-lg focus:shadow-outline">
                 <div className="flex flex-wrap flex-auto">
                   <div className="flex-1">
                     <input
                       type="text"
-                      placeholder={props.placeholder}
                       name={props.name}
                       id={props.id}
                       autoComplete={props.autoComplete}

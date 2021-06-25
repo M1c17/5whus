@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import Dropdown from './Dropdown';
 
-export default function Multiselect() {
+interface Props {
+  label: string;
+  options: string[];
+}
+
+export default function Multiselect(props: Props) {
   // state showing if dropdown is open or closed
   const [dropdown, setDropdown] = useState(false);
   // managing dropdown items (list of dropdown items)
-  const [items, setItems] = useState<string[]>(['Easy', 'Medium', 'Hard']);
+  const [items, setItems] = useState(props.options);
   // contains selected items
   const [selectedItems, setSelected] = useState([]);
 
@@ -23,8 +28,10 @@ export default function Multiselect() {
     setSelected(filtered);
   };
 
+  // TODO: ENCASULATE COMPONENT FORM INPUT
   return (
     <div className="autcomplete">
+      <label className="relative text-gray-500">{props.label}</label>
       <div className="flex flex-col items-center w-full mx-auto">
         <div className="w-full">
           <div className="relative flex flex-col items-center">

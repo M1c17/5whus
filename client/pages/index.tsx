@@ -1,17 +1,17 @@
-import React from 'react';
+import {
+  GetServerSideProps,
+  GetServerSidePropsContext,
+  GetStaticProps,
+  GetStaticPropsContext,
+  NextPage,
+} from 'next';
 
-interface Props {}
+const About: NextPage = () => {
+  console.log('ABOUT PAGE');
 
-const Home = (props: Props) => {
   return (
-    <div>
-      <main>
-        <h1>start</h1>
-      </main>
-
-      <footer></footer>
-    </div>
+    <div className="flex flex-col flex-grow px-6 pt-1 ">ABOUT PAGE HERE</div>
   );
 };
 
-export default Home;
+export default About;
