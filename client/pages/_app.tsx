@@ -1,7 +1,7 @@
 import '../styles/styles.css';
 import type { AppProps /*, AppContext */ } from 'next/app';
 import Sidebar from '../components/Sidebar';
-import IndexPageComponent from '../components/pages/index/index';
+import Navbar from '../components/Navbar';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -10,7 +10,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Sidebar />
       </div>
       <div className="flex flex-col col-span-12 overflow-hidden bg-pink-100 rounded-lg lg:col-span-7">
-        <IndexPageComponent />
+        <Navbar />
         <Component {...pageProps} />
       </div>
     </div>
