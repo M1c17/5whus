@@ -1,10 +1,4 @@
-import {
-  GetServerSideProps,
-  GetServerSidePropsContext,
-  GetStaticProps,
-  GetStaticPropsContext,
-  NextPage,
-} from 'next';
+import { NextPage } from 'next';
 
 const Home: NextPage = () => {
   console.log('Home PAGE');
